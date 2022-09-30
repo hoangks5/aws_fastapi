@@ -41,7 +41,6 @@ def lambda_handler(event, context):
         }),
     }
 
-
 # application_name/hello_world/app.py
 
 from fastapi import FastAPI

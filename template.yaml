@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  lambda-python3.9
+  lambda-python3.8
 
-  Sample SAM Template for lambda-python3.9
+  Sample SAM Template for lambda-python3.8
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -16,7 +16,7 @@ Resources:
     Properties:
       CodeUri: hello_world/
       Handler: app.lambda_handler
-      Runtime: python3.9
+      Runtime: python3.8
       Architectures:
         - arm64
       Events:

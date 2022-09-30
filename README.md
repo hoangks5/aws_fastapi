@@ -1,4 +1,4 @@
-# lambda-python3.9
+# lambda-python3.8
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
@@ -56,7 +56,7 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 Build your application with the `sam build --use-container` command.
 
 ```bash
-lambda-python3.9$ sam build --use-container
+lambda-python3.8$ sam build --use-container
 ```
 
 The SAM CLI installs dependencies defined in `hello_world/requirements.txt`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
@@ -66,14 +66,14 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-lambda-python3.9$ sam local invoke HelloWorldFunction --event events/event.json
+lambda-python3.8$ sam local invoke HelloWorldFunction --event events/event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
 
 ```bash
-lambda-python3.9$ sam local start-api
-lambda-python3.9$ curl http://localhost:3000/
+lambda-python3.8$ sam local start-api
+lambda-python3.8$ curl http://localhost:3000/
 ```
 
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
@@ -97,7 +97,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-lambda-python3.9$ sam logs -n HelloWorldFunction --stack-name lambda-python3.9 --tail
+lambda-python3.8$ sam logs -n HelloWorldFunction --stack-name lambda-python3.8 --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -107,12 +107,12 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `tests` folder in this project. Use PIP to install the test dependencies and run tests.
 
 ```bash
-lambda-python3.9$ pip install -r tests/requirements.txt --user
+lambda-python3.8$ pip install -r tests/requirements.txt --user
 # unit test
-lambda-python3.9$ python -m pytest tests/unit -v
+lambda-python3.8$ python -m pytest tests/unit -v
 # integration test, requiring deploying the stack first.
 # Create the env variable AWS_SAM_STACK_NAME with the name of the stack we are testing
-lambda-python3.9$ AWS_SAM_STACK_NAME=<stack-name> python -m pytest tests/integration -v
+lambda-python3.8$ AWS_SAM_STACK_NAME=<stack-name> python -m pytest tests/integration -v
 ```
 
 ## Cleanup
@@ -120,7 +120,7 @@ lambda-python3.9$ AWS_SAM_STACK_NAME=<stack-name> python -m pytest tests/integra
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-aws cloudformation delete-stack --stack-name lambda-python3.9
+aws cloudformation delete-stack --stack-name lambda-python3.8
 ```
 
 ## Resources
